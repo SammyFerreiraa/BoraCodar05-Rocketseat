@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <div id="display">
+      <div id="display-top">
+        <p data-action="calc"></p>
+      </div>
+      <div id="display-bottom">
+        <img src="./assets/equals.svg" alt="simbolo de igual">
+        <input type="text" data-action="display"></input>
+      </div>
+    </div>
+    <div id="keyboard">
+      <button class="secondary" onclick="deleteAll()">CE</button>
+      <button onclick="apagar()">C</button>
+      <button><img src="./assets/icons/Percent.svg" alt="Percent"></button>
+      <button class="tertiary" onclick="valueDisplay('/')"><img src="./assets/icons/Divide.svg" alt="divide"></button>
+      <button onclick="valueDisplay('7')">7</button>
+      <button onclick="valueDisplay('8')">8</button>
+      <button onclick="valueDisplay('9')">9</button>
+      <button class="tertiary" onclick="valueDisplay('*')"><img src="./assets/icons/X.svg" alt="multiply"></button>
+      <button onclick="valueDisplay('4')">4</button>
+      <button onclick="valueDisplay('5')">5</button>
+      <button onclick="valueDisplay('6')">6</button>
+      <button class="tertiary" onclick="valueDisplay('-')"><img src="./assets/icons/Minus.svg" alt="Minus"></button>
+      <button onclick="valueDisplay('1')">1</button>
+      <button onclick="valueDisplay('2')">2</button>
+      <button onclick="valueDisplay('3')">3</button>
+      <button class="tertiary" onclick="valueDisplay('+')"><img src="./assets/icons/Plus.svg" alt="plus"></button>
+      <button onclick="invertValue()"><img src="./assets/icons/PlusMinus.svg" alt="plusMinus"></button>
+      <button onclick="valueDisplay('0')">0</button>
+      <button onclick="valueDisplay(',')">,</button>
+      <button class="equal" onclick="calculate()"><img src="./assets/icons/equalsimbol.svg" alt="Equal"></button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
